@@ -38,4 +38,4 @@ This project is a scalable e-commerce platform built using Django REST Framework
 
 Below is the high-level architecture of the Scalable E-Commerce Platform:
 
-![Architecture Diagram](architecture-diagram.png)
+![Architecture Diagram](public/architecture-diagram.png)
