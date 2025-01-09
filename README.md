@@ -1,2 +1,7 @@
 # scalable-ecommerce-platform
-A scalable e-commerce platform built with Django REST Framework and PostgreSQL, deployed on AWS.
+This project is a scalable e-commerce platform built using Django REST Framework and PostgreSQL, designed to handle complex queries and asynchronous tasks. It will be deployed on AWS Elastic Beanstalk.
+
+
+[Client] --> [Django REST Framework APIs] --> [PostgreSQL Database]
+                     |
+                [Redis Cache]
