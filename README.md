@@ -39,3 +39,64 @@ This project is a scalable e-commerce platform built using Django REST Framework
 Below is the high-level architecture of the Scalable E-Commerce Platform:
 
 ![Architecture Diagram](Public/architecture-diagram.png)
+
+
+---
+
+## Authentication Features
+
+The application uses JWT for secure authentication. Below are the endpoints:
+
+1. **Register a User:**
+   - **Endpoint:** `/api/auth/register/`
+   - **Method:** POST
+   - **Request Body:**
+     ```json
+     {
+       "username": "testuser",
+       "email": "test@example.com",
+       "password": "testpassword"
+     }
+     ```
+   - **Response:**
+     ```json
+     {
+       "id": 1,
+       "username": "testuser",
+       "email": "test@example.com"
+     }
+     ```
+
+2. **Login:**
+   - **Endpoint:** `/api/auth/login/`
+   - **Method:** POST
+   - **Request Body:**
+     ```json
+     {
+       "username": "testuser",
+       "password": "testpassword"
+     }
+     ```
+   - **Response:**
+     ```json
+     {
+       "access": "jwt_access_token",
+       "refresh": "jwt_refresh_token"
+     }
+     ```
+
+3. **Refresh Token:**
+   - **Endpoint:** `/api/auth/token/refresh/`
+   - **Method:** POST
+   - **Request Body:**
+     ```json
+     {
+       "refresh": "jwt_refresh_token"
+     }
+     ```
+   - **Response:**
+     ```json
+     {
+       "access": "new_jwt_access_token"
+     }
+     ```
